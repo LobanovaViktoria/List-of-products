@@ -28,7 +28,7 @@ final class ListViewController: UIViewController {
     
     private let lineSpacingForDetailCollection: CGFloat = 30
     private let interItemSpacingForDetailCollection: CGFloat = 16
-    private let heightDetailCollectionCell: CGFloat = 270
+    private let heightDetailCollectionCell: CGFloat = 290
     private var widthDetailCollectionCell: CGFloat {
         (UIScreen.main.bounds.width - (padding * 2 +
         interItemSpacingForDetailCollection)) / 2

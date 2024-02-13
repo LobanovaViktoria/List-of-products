@@ -32,7 +32,8 @@ final class DetailCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = .fontColor.whiteNTI
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 14, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -41,8 +42,8 @@ final class DetailCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = .fontColor.lightGrayNTI
         label.textAlignment = .center
-        label.numberOfLines = 5
-        label.font = .systemFont(ofSize: 10)
+        label.numberOfLines = 6
+        label.font = .systemFont(ofSize: 9)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -142,19 +143,20 @@ final class DetailCollectionViewCell: UICollectionViewCell {
             detailImageView.trailingAnchor.constraint(equalTo: background.trailingAnchor),
             detailImageView.heightAnchor.constraint(equalToConstant: (contentView.bounds.height - heightButtonPutIntoCart / 2) / 2),
 
-            detailNameLabel.topAnchor.constraint(equalTo: background.topAnchor, constant: 10),
-            detailNameLabel.centerXAnchor.constraint(equalTo: background.centerXAnchor),
-            detailNameLabel.heightAnchor.constraint(equalToConstant: 20),
+            detailNameLabel.topAnchor.constraint(equalTo: background.topAnchor, constant: 2),
+            detailNameLabel.trailingAnchor.constraint(equalTo: background.trailingAnchor, constant: -(padding / 2)),
+            detailNameLabel.leadingAnchor.constraint(equalTo: background.leadingAnchor, constant: padding / 2),
+            detailNameLabel.heightAnchor.constraint(equalToConstant: 35),
             detailNameLabel.widthAnchor.constraint(equalTo: background.widthAnchor),
 
             ingredientsLabel.topAnchor.constraint(equalTo: detailNameLabel.bottomAnchor, constant: 3),
             ingredientsLabel.heightAnchor.constraint(equalToConstant: 55),
-            ingredientsLabel.trailingAnchor.constraint(equalTo: background.trailingAnchor, constant: -padding),
-            ingredientsLabel.leadingAnchor.constraint(equalTo: background.leadingAnchor, constant: padding),
+            ingredientsLabel.trailingAnchor.constraint(equalTo: background.trailingAnchor, constant: -(padding / 2)),
+            ingredientsLabel.leadingAnchor.constraint(equalTo: background.leadingAnchor, constant: padding / 2),
 
             viewForPriceAndWeight.bottomAnchor.constraint(equalTo:detailImageView.topAnchor, constant: -8),
             viewForPriceAndWeight.centerXAnchor.constraint(equalTo: background.centerXAnchor),
-            viewForPriceAndWeight.heightAnchor.constraint(equalToConstant: 20),
+            viewForPriceAndWeight.heightAnchor.constraint(equalToConstant: 18),
             viewForPriceAndWeight.widthAnchor.constraint(equalTo: background.widthAnchor),
 
             priceLabel.centerYAnchor.constraint(equalTo: viewForPriceAndWeight.centerYAnchor),
