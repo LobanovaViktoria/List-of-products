@@ -147,7 +147,6 @@ final class DetailCollectionViewCell: UICollectionViewCell {
             detailNameLabel.trailingAnchor.constraint(equalTo: background.trailingAnchor, constant: -(padding / 2)),
             detailNameLabel.leadingAnchor.constraint(equalTo: background.leadingAnchor, constant: padding / 2),
             detailNameLabel.heightAnchor.constraint(equalToConstant: 35),
-            detailNameLabel.widthAnchor.constraint(equalTo: background.widthAnchor),
 
             ingredientsLabel.topAnchor.constraint(equalTo: detailNameLabel.bottomAnchor, constant: 3),
             ingredientsLabel.heightAnchor.constraint(equalToConstant: 55),

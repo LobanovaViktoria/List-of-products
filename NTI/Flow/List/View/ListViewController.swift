@@ -267,6 +267,10 @@ extension ListViewController: UICollectionViewDelegate {
                 collectionView.reloadItems(at: [previousIndexPath, indexPath])
             }
             detailCollection.reloadData()
+            detailCollection.scrollToItem(
+                at: IndexPath(row: 0, section: 0),
+                at: .bottom,
+                animated: false)
         }
     }
 }
